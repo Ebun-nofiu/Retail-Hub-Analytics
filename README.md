@@ -37,7 +37,7 @@ Key Data Components:
 	•	29,000+ reviews  
 	•	3,000+ returns  
 
-⸻
+---
 
 ## 🏗️ Data Model  
 
@@ -64,7 +64,7 @@ An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize tabl
 	•	Power BI – Data visualization and dashboarding   
 	•	ChartDB – ER diagram design  
 
-⸻
+---
 
 ## Dashboard Preview  
 ## Overview Page
@@ -82,81 +82,59 @@ An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize tabl
 
 📊 Key Analyses  
 
-The project includes 10 SQL-based analyses:
-	1.	Most valuable customers
-	2.	Marketing channel performance
-	3.	Inactive customers (6+ months)
-	4.	Most profitable product categories
-	5.	Top-performing products
-	6.	Categories driving highest order value
-	7.	Products with high return rates (quality issues)
-	8.	Cross-sell opportunities
-	9.	Supplier performance evaluation
-	10.	Sales trends over time
+The project includes 10 SQL-based analyses:  
+	1.	Most valuable customers  
+	2.	Marketing channel performance  
+	3.	Inactive customers (6+ months)  
+	4.	Most profitable product categories  
+	5.	Top-performing products  
+	6.	Categories driving highest order value  
+	7.	Products with high return rates (quality issues)  
+	8.	Cross-sell opportunities  
+	9.	Supplier performance evaluation  
+	10.	Sales trends over time  
 
-📈 Dashboard Overview
 
-A 4-page Power BI dashboard was developed:
+## 📖 Key Findings & Recommendations  
+🎯 **Customer Strategy**  
+Top 10 customers generate $140K+ with $2,437 average order value (3x company average).  
+10 high-value customers representing $110K revenue are inactive 6+ months.  
+**Recommendations:**  
+	∙	Offer personalized benefits: early product access, free premium shipping  
+	∙	Launch immediate win-back campaign with 25-30% discount offers  
+	∙	Personalize outreach based on previous purchase patterns  
+	∙	Expected recovery: $25-30K from 25-30% win-back rate  
 
-1. Executive Overview
-	•	Revenue, Orders, Customers, AOV (KPIs)
-	•	Revenue trend over time
-	•	Revenue by category
-	•	Orders by acquisition channel
+💰**Marketing Optimization**  
+Social Media delivers $1,298 LTV vs Paid Search $1,181 LTV (10% difference)  
+**Recommendations:**  
+	∙	Reallocate 30% of Paid Search budget to Social Media campaigns  
+	∙	Double down on Organic SEO ($1,249 LTV with near-zero acquisition cost)  
+	∙	Expected impact: 15-20% improvement in marketing ROI  
 
-2. Customer Intelligence
-	•	Top customers
-	•	Revenue by acquisition channel
-	•	Inactive customers
-	•	Customer distribution
-
-3. Product Performance
-	•	Top products
-	•	Profit by category
-	•	Average order value by category
-	•	Return rate vs ratings
-
-4. Operations & Suppliers
-	•	Top suppliers
-	•	Revenue by supplier country
-	•	Return rates by category
-	•	High-return products
-
-📖 Key Findings & Recommendations
-🎯 Customer Strategy
-Finding: Top 10 customers generate $140K+ with $2,437 average order value (3x company average)Recommendation:
-	∙	Create exclusive VIP tier with dedicated account managers
-	∙	Offer personalized benefits: early product access, free premium shipping
-	∙	Implement monthly touchpoints to prevent churn
-Finding: 10 high-value customers representing $110K revenue are inactive 6+ monthsRecommendation:
-	∙	Launch immediate win-back campaign with 25-30% discount offers
-	∙	Personalize outreach based on previous purchase patterns
-	∙	Expected recovery: $25-30K from 25-30% win-back rate
-  💰 Marketing Optimization
-Finding: Social Media delivers $1,298 LTV vs Paid Search $1,181 LTV (10% difference)Recommendation:
-	∙	Reallocate 30% of Paid Search budget to Social Media campaigns
-	∙	Double down on Organic SEO ($1,249 LTV with near-zero acquisition cost)
-	∙	Expected impact: 15-20% improvement in marketing ROI
- 📦 Product & Inventory
-Finding: Electronics drives 44% revenue ($8.4M) with 37.6% margin; Toys & Games shows highest margin at 38.5%Recommendation:
-	∙	Expand Electronics and Toys & Games product selection by 20-30%
-	∙	Reduce inventory in Books & Media (only $484K revenue, 5% of total)
-	∙	Negotiate better supplier terms for high-volume categories
-Finding: Return rates >20% concentrated in Sports & Outdoors and Books & MediaRecommendation:
+📦 **Product & Inventory**    
+Electronics drives 44% revenue ($8.4M) with 37.6% margin; Toys & Games shows highest margin at 38.5%  
+Return rates >20% concentrated in Sports & Outdoors and Books & Media  
+**Recommendations:**  
+	∙	Expand Electronics and Toys & Games product selection by 20-30%  
+	∙	Reduce inventory in Books & Media (only $484K revenue, 5% of total)  
 	∙	Audit suppliers for problem products (Sleeping Bag Basic: 26% return rate)
-	∙	Improve product descriptions to set accurate expectations
-	∙	Implement supplier KPI: >15% return rate triggers performance review
-  🔄 Cross-Selling Opportunity
-Finding: Only 1.3% of orders contain multiple categories (98.7% single-category)Recommendation:
-	∙	Implement “Frequently Bought Together” recommendations
-	∙	Create curated bundles (e.g., “Athleisure Set”: Clothing + Sports)
-	∙	Offer bundle discounts: 10% off for 2+ categories
-	∙	Expected impact: Increase to 5-7% multi-category orders = +$1.5-2M annual revenue
-  📅 Seasonal Planning
-Finding: Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growthRecommendation:
-	∙	Build inventory in August-September (before growth acceleration)
-	∙	Hire seasonal staff in October
-	∙	Lock in supplier pricing and capacity by July
+	∙	Implement supplier KPI: >15% return rate triggers performance review  
+
+🔄 **Cross-Selling Opportunity**  
+Only 1.3% of orders contain multiple categories (98.7% single-category)  
+**Recommendations:**  
+	∙	Implement “Frequently Bought Together” recommendations  
+	∙	Create curated bundles (e.g., “Athleisure Set”: Clothing + Sports)  
+	∙	Offer bundle discounts: 10% off for 2+ categories  
+	∙	Expected impact: Increase to 5-7% multi-category orders = +$1.5-2M annual revenue  
+
+📅 **Seasonal Planning**    
+Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growth  
+**Recommendations:**  
+	∙	Build inventory in August-September (before growth acceleration)  
+	∙	Hire seasonal staff in October  
+	∙	Lock in supplier pricing and capacity by July  
 	∙	Launch major campaigns in October to capitalize on momentum  
 
 ## Next Steps  
