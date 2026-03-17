@@ -24,7 +24,7 @@ The analysis focuses on solving key business challenges:
 
 ---
 
-  🗂️ Dataset  
+ ## 🗂️ Dataset  
 
 The dataset is based on the Brazilian E-Commerce Public Dataset by Olist (Kaggle) and was enhanced with additional fields to simulate a real-world business environment.  
 
@@ -39,7 +39,7 @@ Key Data Components:
 
 ⸻
 
-🏗️ Data Model  
+## 🏗️ Data Model  
 
 The database was designed using Third Normal Form (3NF) to ensure:  
 	•	Minimal redundancy  
@@ -58,16 +58,27 @@ Core Tables:
 
 An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize table relationships.  
 
-##⚙️ Tools & Technologies  
+⚙️ **Tools and Technologies**  
 	•	PostgreSQL – Database management  
 	•	pgAdmin 4 – Query execution  
-	•	Power BI – Data visualization and dashboarding  
+	•	Power BI – Data visualization and dashboarding   
 	•	ChartDB – ER diagram design  
 
 ⸻
 
 ## Dashboard Preview  
 ## Overview Page
+
+![Executive Overview](Executive-Overview.png)
+
+## Customer Intelligence
+![Customer Intelligence](Customer-Intelligence.png)
+
+## Product Performance
+![Product Performance](Product-Performance_.png)
+
+## Operations & Supplier Insights
+![Operations & Supplier Insights](Operations-and-Supplier-Insights.png)
 
 📊 Key Analyses  
 
