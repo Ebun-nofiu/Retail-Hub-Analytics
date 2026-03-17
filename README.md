@@ -80,7 +80,7 @@ An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize tabl
 ## Operations & Supplier Insights
 ![Operations & Supplier Insights](Operations-and-Supplier-Insights.png)
 
-📊 Key Analyses  
+📊 **Key Analyses**  
 
 The project includes 10 SQL-based analyses:  
 	1.	Most valuable customers  
@@ -143,7 +143,7 @@ Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growth
 • Expand dataset to include marketing and logistics data  
 
 ## Project Resources  
-• **Dataset Source:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download&select=olist_geolocation_dataset.csv
-• **SQL DDL:** https://drive.google.com/file/d/1Sj-6xoHxKbPurpUXiAfCfnxWLH2f18ZT/view
-• **SQL Queries:** https://drive.google.com/file/d/1TQvupby4cEjvE96-Ib2GSW7p2PW3Jd6-/view
+• **Dataset Source:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download&select=olist_geolocation_dataset.csv  
+• **SQL DDL:** https://drive.google.com/file/d/1Sj-6xoHxKbPurpUXiAfCfnxWLH2f18ZT/view  
+• **SQL Queries:** https://drive.google.com/file/d/1TQvupby4cEjvE96-Ib2GSW7p2PW3Jd6-/view  
 • **Power BI Dashboard:** 
