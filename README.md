@@ -1,68 +1,75 @@
 # Retail Hub Analytics
+
 Transforming E-commerce Data into Strategic Business Insights. 
+---
 
-📌 Project Overview
-This project presents a complete end-to-end business analytics solution for a fictional e-commerce company, Retail Hub. The objective was to transform fragmented transactional data into a structured database and generate actionable insights to support strategic decision-making.
+## 📌 Project Overview  
+This project presents a complete end-to-end business analytics solution for a fictional e-commerce company, Retail Hub. The objective was to transform fragmented transactional data into a structured database and generate actionable insights to support strategic decision-making.  
 
-The project covers:
-•	Data modeling and database design
-	•	SQL-based analytical queries
-	•	Business insight generation
-	•	Interactive dashboard development in Power BI. 
+The project covers:  
+    •	Data modeling and database design  
+	•	SQL-based analytical queries  
+	•	Business insight generation  
+	•	Interactive dashboard development in Power BI  
 
-  🎯 Business Objectives
+## 🎯 Business Objectives  
 
-The analysis focuses on solving key business challenges:
-	•	Identify high-value customers and improve retention
-	•	Evaluate marketing channel effectiveness
-	•	Detect inactive (at-risk) customers
-	•	Optimize product mix and profitability
-	•	Analyze supplier performance
-	•	Understand sales trends and seasonality
+The analysis focuses on solving key business challenges:  
+• Identify high-value customers and improve retention  
+• Evaluate marketing channel effectiveness  
+• Detect inactive (at-risk) customers  
+• Optimize product mix and profitability  
+• Analyze supplier performance  
+• Understand sales trends and seasonality  
 
-  🗂️ Dataset
+---
 
-The dataset is based on the Brazilian E-Commerce Public Dataset by Olist (Kaggle) and was enhanced with additional fields to simulate a real-world business environment.
+  🗂️ Dataset  
 
-Key Data Components:
-	•	15,000 customers
-	•	25,000 orders
-	•	45,000+ order items
-	•	2,000 products across 8 categories
-	•	150 suppliers
-	•	29,000+ reviews
-	•	3,000+ returns
+The dataset is based on the Brazilian E-Commerce Public Dataset by Olist (Kaggle) and was enhanced with additional fields to simulate a real-world business environment.  
 
-⸻
-
-🏗️ Data Model
-
-The database was designed using Third Normal Form (3NF) to ensure:
-	•	Minimal redundancy
-	•	Data integrity
-	•	Efficient querying
-
-Core Tables:
-	•	Customers
-	•	Orders
-	•	Order_Items
-	•	Products
-	•	Categories
-	•	Suppliers
-	•	Reviews
-	•	Returns
-
-An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize table relationships.
-
-⚙️ Tools & Technologies
-	•	PostgreSQL – Database management
-	•	pgAdmin 4 – Query execution
-	•	Power BI – Data visualization and dashboarding
-	•	ChartDB – ER diagram design
+Key Data Components:  
+	•	15,000 customers  
+	•	25,000 orders  
+	•	45,000+ order items  
+	•	2,000 products across 8 categories  
+	•	150 suppliers  
+	•	29,000+ reviews  
+	•	3,000+ returns  
 
 ⸻
 
-📊 Key Analyses
+🏗️ Data Model  
+
+The database was designed using Third Normal Form (3NF) to ensure:  
+	•	Minimal redundancy  
+	•	Data integrity  
+	•	Efficient querying  
+
+Core Tables:  
+	•	Customers  
+	•	Orders  
+	•	Order_Items  
+	•	Products  
+	•	Categories  
+	•	Suppliers  
+	•	Reviews  
+	•	Returns  
+
+An Entity-Relationship Diagram (ERD) was created using ChartDB to visualize table relationships.  
+
+##⚙️ Tools & Technologies  
+	•	PostgreSQL – Database management  
+	•	pgAdmin 4 – Query execution  
+	•	Power BI – Data visualization and dashboarding  
+	•	ChartDB – ER diagram design  
+
+⸻
+
+## Dashboard Preview  
+## Overview Page
+
+📊 Key Analyses  
 
 The project includes 10 SQL-based analyses:
 	1.	Most valuable customers
@@ -139,5 +146,14 @@ Finding: Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growthRecomm
 	∙	Build inventory in August-September (before growth acceleration)
 	∙	Hire seasonal staff in October
 	∙	Lock in supplier pricing and capacity by July
-	∙	Launch major campaigns in October to capitalize on momentum
-  
+	∙	Launch major campaigns in October to capitalize on momentum  
+
+## Next Steps  
+• Develop predictive models for churn and customer lifetime value  
+• Implement recommendation systems for cross-selling  
+• Expand dataset to include marketing and logistics data  
+
+## Project Resources  
+• **Dataset Source:**  
+• **SQL (DDL + Queries):**  
+• **Power BI Dashboard:**  
