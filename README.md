@@ -146,4 +146,3 @@ Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growth
 • **Dataset Source:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download&select=olist_geolocation_dataset.csv  
 • **SQL DDL:** https://drive.google.com/file/d/1Sj-6xoHxKbPurpUXiAfCfnxWLH2f18ZT/view  
 • **SQL Queries:** https://drive.google.com/file/d/1TQvupby4cEjvE96-Ib2GSW7p2PW3Jd6-/view  
-• **Power BI Dashboard:** 
