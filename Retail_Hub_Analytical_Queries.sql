@@ -1,5 +1,5 @@
 -- Analysis 1: Who are our most valuable customers?
-SELECT 
+SELECT
     c.customer_id,
     c.first_name || ' ' || c.last_name AS customer_name,
     c.acquisition_chanel,
@@ -14,7 +14,7 @@ ORDER BY total_revenue DESC
 LIMIT 10;
 
 -- Analysis 2: Which marketing channels deliver the highest value customers?
-SELECT 
+SELECT
     c.acquisition_chanel,
     COUNT(DISTINCT c.customer_id) AS total_customers,
     COUNT(DISTINCT o.order_id) AS total_orders,
@@ -28,7 +28,7 @@ ORDER BY avg_customer_ltv DESC;
 
 -- Analysis 3: Which customers haven't purchased in 6+ months?
 WITH customer_last_order AS (
-    SELECT 
+    SELECT
         c.customer_id,
         c.first_name || ' ' || c.last_name AS customer_name,
         c.email,
@@ -41,14 +41,14 @@ WITH customer_last_order AS (
     WHERE o.order_status != 'Cancelled'
     GROUP BY c.customer_id, c.first_name, c.last_name, c.email
 )
-SELECT 
+SELECT
     customer_name,
     email,
     last_order_date,
     days_since_last_order,
     total_orders,
     total_spent,
-    CASE 
+    CASE
         WHEN days_since_last_order >= 365 THEN 'Critical'
         ELSE 'High Risk'
     END AS churn_risk
@@ -58,7 +58,7 @@ ORDER BY total_spent DESC
 LIMIT 10;
 
 -- Analysis 4: Which product categories are most profitable?
-SELECT 
+SELECT
     cat.category_name,
     COUNT(DISTINCT p.product_id) AS num_products,
     COUNT(DISTINCT oi.order_id) AS num_orders,
@@ -75,7 +75,7 @@ GROUP BY cat.category_name
 ORDER BY gross_profit DESC;
 
 -- Analysis 5: What are our star products by revenue and volume?
-SELECT 
+SELECT
     p.product_id,
     p.product_name,
     cat.category_name,
@@ -95,7 +95,7 @@ LIMIT 10;
 
 -- Analysis 6: Which categories drive highest order values?
 WITH category_orders AS (
-    SELECT 
+    SELECT
         cat.category_name,
         o.order_id,
         o.total_amount AS order_total
@@ -106,7 +106,7 @@ WITH category_orders AS (
     WHERE o.order_status != 'Cancelled'
     GROUP BY cat.category_name, o.order_id, o.total_amount
 )
-SELECT 
+SELECT
     category_name,
     COUNT(DISTINCT order_id) AS num_orders,
     ROUND(AVG(order_total), 2) AS avg_order_value,
@@ -118,14 +118,14 @@ ORDER BY avg_order_value DESC;
 
 -- Analysis 7: Which products have quality or expectation issues?
 WITH product_returns AS (
-    SELECT 
+    SELECT
         p.product_id,
         p.product_name,
         cat.category_name,
         COUNT(DISTINCT oi.order_item_id) AS items_sold,
         COUNT(DISTINCT r.return_id) AS items_returned,
-        ROUND(100.0 * COUNT(DISTINCT r.return_id) / 
-              NULLIF(COUNT(DISTINCT oi.order_item_id), 0), 2) AS return_rate_pct,
+        ROUND(100.0 * COUNT(DISTINCT r.return_id) /
+            NULLIF(COUNT(DISTINCT oi.order_item_id), 0), 2) AS return_rate_pct,
         ROUND(SUM(r.refund_amount), 2) AS total_refunded
     FROM products p
     JOIN categories cat ON p.category_id = cat.category_id
@@ -134,7 +134,7 @@ WITH product_returns AS (
     GROUP BY p.product_id, p.product_name, cat.category_name
     HAVING COUNT(DISTINCT oi.order_item_id) >= 20
 )
-SELECT 
+SELECT
     product_name,
     category_name,
     items_sold,
@@ -157,15 +157,15 @@ WITH order_categories AS (
     JOIN categories cat ON p.category_id = cat.category_id
     WHERE o.order_status != 'Cancelled'
 )
-SELECT 
+SELECT
     oc1.category_name AS category_1,
     oc2.category_name AS category_2,
     COUNT(DISTINCT oc1.order_id) AS times_bought_together,
-    ROUND(100.0 * COUNT(DISTINCT oc1.order_id) / 
-          (SELECT COUNT(DISTINCT order_id) FROM orders WHERE order_status != 'Cancelled'), 2) 
-          AS pct_of_all_orders
+    ROUND(100.0 * COUNT(DISTINCT oc1.order_id) /
+        (SELECT COUNT(DISTINCT order_id) FROM orders WHERE order_status != 'Cancelled'), 2)
+        AS pct_of_all_orders
 FROM order_categories oc1
-JOIN order_categories oc2 ON oc1.order_id = oc2.order_id 
+JOIN order_categories oc2 ON oc1.order_id = oc2.order_id
     AND oc1.category_name < oc2.category_name
 GROUP BY oc1.category_name, oc2.category_name
 HAVING COUNT(DISTINCT oc1.order_id) >= 50
@@ -173,15 +173,15 @@ ORDER BY times_bought_together DESC
 LIMIT 10;
 
 -- Analysis 9: Which supplier the best products?
-SELECT 
+SELECT
     s.supplier_name,
     s.country,
     COUNT(DISTINCT p.product_id) AS num_products,
     SUM(oi.quantity) AS units_sold,
     ROUND(SUM(oi.subtotal), 2) AS total_revenue,
     ROUND(AVG(pr.rating), 2) AS avg_product_rating,
-    ROUND(100.0 * COUNT(DISTINCT r.return_id) / 
-          NULLIF(COUNT(DISTINCT oi.order_item_id), 0), 2) AS return_rate_pct
+    ROUND(100.0 * COUNT(DISTINCT r.return_id) /
+        NULLIF(COUNT(DISTINCT oi.order_item_id), 0), 2) AS return_rate_pct
 FROM suppliers s
 JOIN products p ON s.supplier_id = p.supplier_id
 JOIN order_items oi ON p.product_id = oi.product_id
@@ -193,7 +193,7 @@ LIMIT 10;
 
 -- Analysis 10: What are our sales patterns over time?
 WITH monthly_sales AS (
-    SELECT 
+    SELECT
         TO_CHAR(order_date, 'YYYY-MM') AS year_month,
         DATE_TRUNC('month', order_date) AS month_start,
         COUNT(DISTINCT order_id) AS num_orders,
@@ -202,16 +202,16 @@ WITH monthly_sales AS (
         ROUND(AVG(total_amount), 2) AS avg_order_value
     FROM orders
     WHERE order_status != 'Cancelled'
-      AND order_date >= CURRENT_DATE - INTERVAL '12 months'
+        AND order_date >= CURRENT_DATE - INTERVAL '12 months'
     GROUP BY year_month, month_start
 )
-SELECT 
+SELECT
     year_month,
     num_orders,
     unique_customers,
     total_revenue,
     avg_order_value,
-    ROUND(100.0 * (total_revenue - LAG(total_revenue) OVER (ORDER BY month_start)) / 
-          NULLIF(LAG(total_revenue) OVER (ORDER BY month_start), 0), 1) AS pct_change_mom
+    ROUND(100.0 * (total_revenue - LAG(total_revenue) OVER (ORDER BY month_start)) /
+        NULLIF(LAG(total_revenue) OVER (ORDER BY month_start), 0), 1) AS pct_change_mom
 FROM monthly_sales
 ORDER BY month_start DESC;
