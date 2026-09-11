@@ -144,7 +144,7 @@ Q4 (Nov-Dec) represents 35% of annual revenue with 25% MoM growth
 ## 📊 Files Included
 - [RetailHub_DDL.sql](RetailHub_DDL.sql) – PostgreSQL table definitions (3NF schema, 8 tables)
 - [Retail_Hub_Analytical_Queries.sql](Retail_Hub_Analytical_Queries.sql) – All 10 SQL analyses referenced above
-- `Retail Hub Dashboard.pbix` – add your Power BI file here so visitors can open the live dashboard, not just preview images (see note below)
+- `Retail Hub Dashboard.pbix` – add your Power BI file here so visitors can open the live dashboard, not just preview images
 
 ## Project Resources
 • **Dataset Source:** [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download&select=olist_geolocation_dataset.csv)
